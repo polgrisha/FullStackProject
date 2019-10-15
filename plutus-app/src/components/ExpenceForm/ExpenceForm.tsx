@@ -19,7 +19,7 @@ const ExpenceForm: React.FC = () => {
         <div className = "expence_form_item">
             <Link to="/all-expences">add</Link>
         </div>
-</div>
+    </div>
   )
 }
 
