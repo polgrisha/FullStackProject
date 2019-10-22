@@ -83,6 +83,12 @@ input {
   font-size: 20px;
 }
 
+button {
+  text-align: left;
+  background-color: aqua;
+  font-size: 20px;
+}
+
 .main_menu {
   font-size: 20px;
   height: 100vh;

@@ -13,12 +13,15 @@ const App: React.FC = () => {
   return (
     <Router>
       <Header />
-      <Route path="/" exact component={TitleHeader} />
-      <Route path="/sign-in" component={SignIn} />
-      <Route path="/sign-up" component={SignUp} />
-      <Route path="/user" component={User} />
-      <Route path="/all-expences" component={ExpenceList} />
-      <Route path="/add-expence" component={ExpenceForm} />
+      <div style={{display: 'flex'}}>
+        <User /> 
+      
+        <Route path="/" exact component={TitleHeader} />
+        <Route path="/sign-in" component={SignIn} />
+        <Route path="/sign-up" component={SignUp} />
+        <Route path="/all-expences" component={ExpenceList} />
+        <Route path="/add-expence" component={ExpenceForm} />
+      </div>
     </Router>
   );
 }

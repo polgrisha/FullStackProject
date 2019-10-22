@@ -1,7 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
-const User: React.FC = () => {
+interface IUser {
+    location: {
+        pathname: string
+    }
+}
+
+const User: React.FC<IUser> = (props) => {
+  const {location} = props
+
+  if (!['/all-expences', '/add-expence', '/user'].includes(location.pathname)) {
+    return null
+  }
   return (
     <div className = "main_menu">
         <div className = "menu">
@@ -26,4 +37,4 @@ const User: React.FC = () => {
   )
 }
 
-export default User
+export default withRouter(User as any)

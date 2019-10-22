@@ -1,40 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ExpenceCard from '../ExpenceCard'
+import { IExpence } from '../../types/expence'
 
 const ExpenceList: React.FC = () => {
+  const [expences, setExpences] = React.useState<IExpence[]>([])
+
+  React.useEffect(() => {
+    void getExpences()
+  }, [])
+
+  const getExpences = React.useCallback(async () => {
+    const responce = await fetch('http://localhost:3000/expences')
+    const data = await responce.json()
+    setExpences(data)
+  }, [])
+
   return (
-    <section className="all_expences">
-        <div className="expence"> 
-          <div className="expence_description">
-            <div className="expence_title">
-              1
-            </div>
-            <div className="expence_amount">
-              8 0000
-            </div>
-          </div>
-        </div>
-        <div className="expence"> 
-          <div className="expence_description">
-            <div className="expence_title">
-              2
-            </div>
-            <div className="expence_amount">
-              500
-            </div>
-          </div>
-        </div>
-        <div className="expence"> 
-          <div className="expence_description">
-            <div className="expence_title">
-              3
-            </div>
-            <div className="expence_amount">
-              1000
-            </div>
-          </div>
-        </div>
-    </section>
+    <div>
+      <section className="all_expences">
+          {expences.map((expence, index) => (
+            <ExpenceCard key={index} {...expence} />
+          ))}
+      </section>
+    </div>
   )
 }
 
