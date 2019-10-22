@@ -1,0 +1,65 @@
+{
+  "expences": [
+    {
+      "id": 1,
+      "title": "first",
+      "amount": 1000
+    },
+    {
+      "id": 2,
+      "title": "second",
+      "amount": 2000
+    },
+    {
+      "title": "third",
+      "amount": 40000,
+      "id": 3
+    },
+    {
+      "title": "fourth",
+      "amount": 1000,
+      "id": 4
+    },
+    {
+      "title": "",
+      "id": 5
+    },
+    {
+      "title": "kek",
+      "amount": 500,
+      "id": 6
+    },
+    {
+      "title": "",
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Ivan",
+      "lastName": "Ivanov"
+    },
+    {
+      "login": "polgrisha",
+      "password": "kek",
+      "name": "Gregory",
+      "surname": "Polyakov",
+      "id": 2
+    },
+    {
+      "login": "anonymus",
+      "password": "anon",
+      "name": "anon",
+      "surname": "anon",
+      "id": 3
+    },
+    {
+      "login": "login",
+      "password": "pass",
+      "name": "login",
+      "surname": "login",
+      "id": 4
+    }
+  ]
+}
