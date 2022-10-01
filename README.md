@@ -1,4 +1,4 @@
-# FullStackProject
+# FullStackProj
 
 ## Онлайн сервис по контролю расходов и учёту долгов Plutus
 
